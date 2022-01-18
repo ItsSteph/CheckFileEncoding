@@ -23,5 +23,17 @@ namespace check_your_encoding
             
                 
         }
+
+        public static Encoding GetUTF8(string fileName)
+        {
+            var bom = new byte[4];
+            using (var file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            {
+                file.Read(bom, 0, 4);
+            }
+
+
+            return Encoding.UTF8;
+        }
     }
 }
