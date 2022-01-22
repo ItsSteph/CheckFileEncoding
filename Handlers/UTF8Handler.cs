@@ -22,7 +22,12 @@ namespace check_your_encoding.Handlers
                 
                 return Encoding.UTF8;
             }
-            else {return base.Handle(fileName); }
+            else
+            {
+                Console.WriteLine("Document is not encoded with UTF-8.");
+                Console.WriteLine("Please try another.");
+                return base.Handle(fileName); 
+            }
         }
     }
 }

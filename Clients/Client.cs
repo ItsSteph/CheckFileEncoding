@@ -1,4 +1,5 @@
 ﻿using check_your_encoding.Abstracts;
+using check_your_encoding.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace check_your_encoding.Clients
 {
     public class Client
     {
-        public static void ClientCode(AbstractHandler handler, string fileName)
+        public static void ClientCode(IHandler handler, string fileName)
         {
             var result = handler.Handle(fileName);
 

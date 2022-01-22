@@ -12,8 +12,7 @@ namespace check_your_encoding.Handlers
         public override Encoding? Handle(string fileName)
         {
 
-            Console.WriteLine("Oops, I cannot determine the encoding or the encoding is not included in my methods at the moment");
-            Console.WriteLine("Please excuse me");
+            Console.WriteLine("Oops, no know encodingtype detected.");
             return null;
         }
     }
