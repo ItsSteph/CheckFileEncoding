@@ -20,9 +20,9 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
   
-    - name: Publish check_your_encoding
+    - name: Publish check_your_encoding.csproj
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
-        PROJECT_FILE_PATH: https://www.nuget.org/packages/CheckFileEncoding/
+        PROJECT_FILE_PATH: C:\Users\steph\source\repos\check_your_encoding
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
         PACKAGE_NAME: CheckFileEncoding
