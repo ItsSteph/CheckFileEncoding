@@ -9,22 +9,15 @@ namespace check_your_encoding.Clients
 {
     public class Client
     {
-        public static void ClientCode(AbstractHandler handler)
+        public static void ClientCode(AbstractHandler handler, string fileName)
         {
-            foreach (var encodingType in new List<string> { "utf8.txt" })
-            {
-                Console.WriteLine($"Client: Who can handle {encodingType}?");
+            var result = handler.Handle(fileName);
 
-                var result = handler.Handle(encodingType);
-
-                if (result != null)
-                {
-                    Console.Write($"   {result}");
-                }
-                else
-                {
-                    Console.WriteLine($"   {encodingType} was not found.");
-                }
+            if (result == null){
+                Console.WriteLine($"The encoding of {fileName} was not found.");
+            }
+            else{
+                Console.Write($"   {result}");
             }
         }
     }

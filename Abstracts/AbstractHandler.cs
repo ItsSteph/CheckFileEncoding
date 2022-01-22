@@ -9,8 +9,7 @@ namespace check_your_encoding.Abstracts
 {
     public abstract class AbstractHandler : IHandler
     {
-
-        private IHandler? _nextHandler;
+        public IHandler? _nextHandler;
 
         public virtual Encoding? Handle(string fileName)
         {
@@ -23,7 +22,6 @@ namespace check_your_encoding.Abstracts
                 return null;
             }
         }
-
         public IHandler? SetNext(IHandler handler)
         {
             this._nextHandler = handler;

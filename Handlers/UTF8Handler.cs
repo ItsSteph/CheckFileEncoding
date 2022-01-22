@@ -11,17 +11,18 @@ namespace check_your_encoding.Handlers
     {
         public override Encoding? Handle(string fileName)
         {
-            var bom = new byte[4];
-            using (var file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            byte[] bom = new byte[4];
+            using (Stream file = File.OpenRead(fileName))
             {
-                file.Read(bom, 0, 4);
+                file.Read(bom);
             }
-
             if (bom[0] == 0xef && bom[1] == 0xbb && bom[2] == 0xbf)
             {
+                Console.WriteLine("The document was encoded with UTF8");
+                
                 return Encoding.UTF8;
             }
-            else { return base.Handle(fileName); }
+            else {return base.Handle(fileName); }
         }
     }
 }

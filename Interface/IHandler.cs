@@ -10,8 +10,6 @@ namespace check_your_encoding.Interface
     {
         Encoding? Handle(string fileName);
 
-        IHandler? SetNext (IHandler handler);
-
-        
+        IHandler? SetNext (IHandler handler);        
     }
 }

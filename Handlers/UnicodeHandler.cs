@@ -1,9 +1,5 @@
 ﻿using check_your_encoding.Abstracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace check_your_encoding.Handlers
 {
@@ -11,19 +7,18 @@ namespace check_your_encoding.Handlers
     {
         public override Encoding? Handle(string fileName)
         {
-            var bom = new byte[4];
-            using (var file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            byte[] bom = new byte[4];
+            using (Stream file = File.OpenRead(fileName))
             {
-                file.Read(bom, 0, 4);
+                file.Read(bom);
             }
-
+            //checks if bom is equal to the bom of the encoding
             if (bom[0] == 0xff && bom[1] == 0xfe)
             {
+                Console.WriteLine("The document is encoded with UTF16(LE)/LittleEndian");
                 return Encoding.Unicode;
             }
-            else {return base.Handle(fileName);}
-
-            
+            else { return base.Handle(fileName); }
         }
     }
 }
