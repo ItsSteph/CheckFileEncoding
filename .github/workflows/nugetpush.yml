@@ -23,6 +23,6 @@ jobs:
     - name: Publish CheckFileEncoding
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
-        PROJECT_FILE_PATH: CheckFileEncoding/check_your_encoding.csproj
+        PROJECT_FILE_PATH: check_your_encoding.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
         PACKAGE_NAME: CheckFileEncoding
