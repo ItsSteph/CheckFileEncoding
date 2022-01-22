@@ -20,7 +20,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
   
-    - name: Publish CheckFileEncoding 
+    - name: Publish check_your_encoding
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
         PROJECT_FILE_PATH: https://www.nuget.org/packages/CheckFileEncoding/
