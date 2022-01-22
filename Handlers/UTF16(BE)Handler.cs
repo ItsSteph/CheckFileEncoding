@@ -26,7 +26,12 @@ namespace check_your_encoding.Handlers
                 Console.WriteLine("The document was encoded with UTF16(BE)/BigEndian");
                 return Encoding.BigEndianUnicode; // returns UTF16(BE)
             }
-            else {return base.Handle(fileName); }
+            else
+            {
+                Console.WriteLine("Document is not encoded with UTF-16 / BigEndian.");
+                Console.WriteLine("Please try using another method");
+                return base.Handle(fileName);
+            }
 
         }
     }

@@ -25,7 +25,7 @@ namespace check_your_encoding.Handlers
             else
             {
                 Console.WriteLine("Document is not encoded with UTF-8.");
-                Console.WriteLine("Please try another.");
+                Console.WriteLine("Please try using another method");
                 return base.Handle(fileName); 
             }
         }

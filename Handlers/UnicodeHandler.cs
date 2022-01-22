@@ -18,7 +18,12 @@ namespace check_your_encoding.Handlers
                 Console.WriteLine("The document is encoded with UTF16(LE)/LittleEndian");
                 return Encoding.Unicode;
             }
-            else { return base.Handle(fileName); }
+            else
+            {
+                Console.WriteLine("Document is not encoded with UTF-16 / Unicode.");
+                Console.WriteLine("Please try using another method");
+                return base.Handle(fileName);
+            }
         }
     }
 }
