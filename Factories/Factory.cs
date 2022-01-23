@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace check_your_encoding.Factories
 {
-    public class Factory
+    class Factory
     {
         public static IHandler Unicode = new UnicodeHandler();
         public static IHandler UTF8 = new UTF8Handler();

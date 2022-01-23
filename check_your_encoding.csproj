@@ -10,7 +10,7 @@
 	<Description>It lets you check for the encoding of a text file</Description>
 	<PackageProjectUrl> https://github.com/ItsSteph/check_your_encoding </PackageProjectUrl>
 	<RepositoryUrl> https://github.com/ItsSteph/CheckFileEncoding.git </RepositoryUrl>
-	<PackageTags>Taggar separerade med semicolon</PackageTags>
+	<PackageTags>C#, VS, encoding, vs, utf8, utf16, unicode</PackageTags>
   </PropertyGroup>
 
 </Project>

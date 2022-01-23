@@ -8,25 +8,20 @@ A nuget for encoding detection of the 3 most common encodings with BOM.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
 ### Installing
 
-To install CheckFileEncoding 
-
-Say what the step will be
+To install CheckFileEncoding, run the following command in [Package Manager Console](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell)
 
 ```
-Give the example
+Install-Package CheckFileEncoding 
 ```
 
-And repeat
+To install CheckFileEncoding, open a command line, switch to the directory that contains you project file and run the command below
 
 ```
-until finished
+dotnet add package CheckFileEncoding 
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
 
 ### Usage/Examples
 
@@ -70,10 +65,10 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ## License
 
-No licens
+[MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgments
 
 * [Marcus Medina](https://github.com/marcusjobb) - Factory and Chain Of Responsibility structure
-* [2Toad](https://stackoverflow.com/questions/3825390/effective-way-to-find-any-files-encoding) - https://stackoverflow.com/questions/3825390/effective-way-to-find-any-files-encoding
+* [2Toad](https://stackoverflow.com/questions/3825390/effective-way-to-find-any-files-encoding) - https://stackoverflow.com/questions/3825390/effective-way-to-find-any-files-encoding - Codeinspiration
 * [cheng-chen](https://stackoverflow.com/users/323924/cheng-chen) - https://stackoverflow.com/questions/3404199/how-to-find-out-the-encoding-of-a-file-c-sharp

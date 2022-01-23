@@ -10,7 +10,7 @@ namespace check_your_encoding.Clients
 {
     public class Client
     {
-        public static void ClientCode(IHandler handler, string fileName)
+        protected static void ClientCode(IHandler handler, string fileName)
         {
             var result = handler.Handle(fileName);
 
