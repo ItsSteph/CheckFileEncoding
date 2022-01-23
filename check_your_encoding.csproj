@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<Version>1.0.2</Version>
+	<Version>1.0.3</Version>
 	<PackageId>CheckFileEncoding</PackageId>
 	<Authors>Stephanie Tronier</Authors>
 	<Description>It lets you check for the encoding of a text file</Description>
